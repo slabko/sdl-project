@@ -1,0 +1,54 @@
+Checks: >
+    boost-*,
+    bugprone-*,
+    -bugprone-easily-swappable-parameters,
+    cert-*,
+    clang-analyzer-*,
+    concurrency-*,
+    cppcore-*,
+    cppcoreguidelines-*,
+    -cppcoreguidelines-owning-memory,
+    -cppcoreguidelines-avoid-non-const-global-variables,
+    -cppcoreguidelines-avoid-magic-numbers,
+    -cppcoreguidelines-pro-type-vararg,
+    google-*,
+    hicpp-*,
+    -hicpp-signed-bitwise,
+    -hicpp-vararg,
+    llvm-*,
+    misc-*,
+    modernize-*,
+    performance-*,
+    portability-*,
+    readability-*,
+    -readability-identifier-length,
+    -readability-make-member-function-const,
+    -readability-magic-numbers,
+    -readability-uppercase-literal-suffix,
+    -readability-static-accessed-through-instance
+
+FormatStyle: 'file'
+
+CheckOptions:
+  - { key: bugprone-argument-comment.StrictMode,                             value: 1                  }
+  - { key: bugprone-exception-escape.FunctionsThatShouldNotThrow,            value: "WinMain,SDL_main" }
+  - { key: readability-identifier-naming.NamespaceCase,                      value: lower_case         }
+  - { key: readability-identifier-naming.ClassCase,                          value: CamelCase          }
+  - { key: readability-identifier-naming.StructCase,                         value: CamelCase          }
+  - { key: readability-identifier-naming.TemplateParameterCase,              value: CamelCase          }
+  - { key: readability-identifier-naming.FunctionCase,                       value: lower_case         }
+  - { key: readability-identifier-naming.VariableCase,                       value: lower_case         }
+  - { key: readability-identifier-naming.ClassMemberCase,                    value: lower_case         }
+  - { key: readability-identifier-naming.ClassMemberSuffix,                  value: _                  }
+  - { key: readability-identifier-naming.PrivateMemberSuffix,                value: _                  }
+  - { key: readability-identifier-naming.ProtectedMemberSuffix,              value: _                  }
+  - { key: readability-identifier-naming.EnumConstantCase,                   value: CamelCase          }
+  - { key: readability-identifier-naming.ConstexprVariableCase,              value: CamelCase          }
+  - { key: readability-identifier-naming.GlobalConstantCase,                 value: UPPER_CASE         }
+  - { key: readability-identifier-naming.MemberConstantCase,                 value: UPPER_CASE         }
+  - { key: readability-identifier-naming.StaticConstantCase,                 value: UPPER_CASE         }
+  - { key: readability-implicit-bool-conversion.AllowIntegerConditions,      value: 1                  }
+  - { key: readability-implicit-bool-conversion.AllowPointerConditions,      value: 1                  }
+  - key: misc-non-private-member-variables-in-classes.IgnoreClassesWithAllMemberVariablesBeingPublic   
+    value: 1
+
