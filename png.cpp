@@ -74,7 +74,7 @@ auto read_png(std::string const& filepath) -> PngData
     p.init();
 
     if (setjmp(png_jmpbuf(p.pngptr))) { // NOLINT(cert-err52-cpp)
-        // Everything is confirms to RAII, so there is no need to clean up
+        // Everything confirms to RAII, so there is no need to clean up
         throw std::runtime_error("LibPNG Error");
     }
 
