@@ -11,6 +11,7 @@ Checks: >
     -cppcoreguidelines-avoid-non-const-global-variables,
     -cppcoreguidelines-avoid-magic-numbers,
     -cppcoreguidelines-pro-type-vararg,
+    -cppcoreguidelines-pro-type-reinterpret-cast,
     google-*,
     hicpp-*,
     -hicpp-signed-bitwise,

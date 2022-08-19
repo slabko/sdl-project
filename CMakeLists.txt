@@ -18,18 +18,20 @@ find_package(spdlog REQUIRED)
 find_package(SDL2 REQUIRED)
 find_package(OpenGL REQUIRED)
 find_package(glm REQUIRED)
+find_package(PNG REQUIRED)
 
 add_executable(playground 
-    glad/src/glad.c 
     main.cpp 
     screen.cpp 
     input.cpp 
     shader.cpp
     buffer.cpp
     cube.cpp
-        camera.cpp
+    camera.cpp
     texture.cpp
+    png.cpp 
 
+    glad/src/glad.c 
     imgui/src/imgui.cpp
     imgui/src/imgui_demo.cpp
     imgui/src/imgui_draw.cpp
@@ -45,6 +47,7 @@ target_link_libraries(playground
     OpenGL::GL 
     glm::glm 
     SDL2::SDL2 
-    ${CMAKE_SOURCE_DIR}/thirdparty/libSDL2_image-2.0.so.0.600.0)
+    PNG::PNG 
+)
 
 target_include_directories(playground PRIVATE glad/include imgui/include)
